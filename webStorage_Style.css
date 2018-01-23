@@ -1,6 +1,13 @@
 @charset "UTF-8";
 /* CSS Document */
 
+#heading{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    text-align: center;
+}
+
 #main{
 width:750px; height:500px;
 margin:0 auto;	

@@ -26,11 +26,15 @@ function init(){
 }
 
 function saveInfo(){
-	var city=document.getElementById("city").value;
-	var comments=document.getElementById("comments").value;
+	var donutType=document.getElementById("donutType").value;
+	var donutFilling=document.getElementById("donutFilling").value;
+    var diameter=document.getElementById("diameter").value;
+    var requests=document.getElementById("requests").value;
 	
-	localStorage.setItem("cityName",city);
-	localStorage.setItem("userComments",comments);
+	localStorage.setItem("donutType",donutType);
+	localStorage.setItem("donutFilling",donutFilling);
+    localStorage.setItem("diameter",diameter);
+    localStorage.setItem("requests",requests);
 	
 	
 	display();
@@ -39,13 +43,16 @@ function saveInfo(){
 
 function display(){
 	var rightBox=document.getElementById("useroutput");
-	var theCity=localStorage.getItem("cityName");
-	var theComments=localStorage.getItem("userComments");
+	var theDonut=localStorage.getItem("donutType");
+	var theFilling=localStorage.getItem("donutFilling");
+    var theDiameter=localStorage.getItem("diameter");
+    var theRequests=localStorage.getItem("requests");
 	
-	if(theComments==undefined){
+    // Form has never been completed
+	if(theDiameter==undefined){
 		document.getElementById("useroutput").innerHTML="";
 	}
-	else{ document.getElementById("useroutput").innerHTML="OUTPUT  <hr /><br /><br />The City: "+theCity+"<br /><br />  The Weather: "+theComments;
+	else{ document.getElementById("useroutput").innerHTML="<hr /><br /><br />Flavor: "+theDonut+"<br /><br />  Filling: "+theFilling+"<br /><br />  Diameter: "+theDiameter+"<br /><br />  Requests: "+theRequests;
 	}
 	
 }
@@ -57,26 +64,34 @@ function display(){
 </head>
 
 <body>
+<br />
+<div id="heading">CHOOSE YOUR DONUT</div>
 
 <div id="main">
 	<section id="userinput">
-    INPUT <br>
+    <br>
 	<hr />
     <br /><br />
     <form>
     
-    <div>City: <br /><input type="input" id="city" size="20"></div>
+    <div>Flavor: <br /><input type="input" id="donutType" size="20"></div>
     <br />
-    <div>Weather:<br /> <textarea id="comments" rows="10"></textarea></div>
+    <div>Type of Filling: <br /> <input type="input" id="donutFilling" size = "20">
+    </div>
     <br />
+    <div>Diameter in Inches:<br /><input type="input" id="diameter" size="20">
+    </div>
+    <br />
+    <div>Special Requests? (optional)<br /> <textarea id="requests" rows="10"></textarea></div>
+    <br />
+        
      <div><input type="button" id="button" value="Save"></div>
     
     </form>
     </section>
     
     
-    <section id="useroutput">
- OUTPUT  
+    <section id="useroutput"> 
  	<hr />
     <br /><br />
     </section>
