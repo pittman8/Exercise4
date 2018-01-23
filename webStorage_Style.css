@@ -1,33 +1,42 @@
 @charset "UTF-8";
 /* CSS Document */
 
+body {
+    background-image: url("donuts.jpg");
+}
+
 #heading{
+    font-family: "Courier New", Courier, monospace;
+    background-color: darksalmon;
     font-size: 40px;
     font-weight: bold;
-    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
     text-align: center;
+    padding: 20px;
 }
 
 #main{
-width:750px; height:500px;
-margin:0 auto;	
+    width:750px; height:500px;
+    margin:0 auto;	
 }
+
 #userinput{
-	float:left;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    float:left;
 	margin-top:25px;
 	padding:20px;
-	background-color:#999966;
+	background-color: lightpink;
 	width:300px; height:500px;
 	}
 
 
 #useroutput{
-	float:left;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    float:left;
 	margin-top:25px;
 	margin-left:20px;
 	padding:20px;
 	width:300px; height:500px;
-	background-color:#CCCCCC;
+	background-color:darksalmon;
 	
 	}
 

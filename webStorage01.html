@@ -52,7 +52,7 @@ function display(){
 	if(theDiameter==undefined){
 		document.getElementById("useroutput").innerHTML="";
 	}
-	else{ document.getElementById("useroutput").innerHTML="<hr /><br /><br />Flavor: "+theDonut+"<br /><br />  Filling: "+theFilling+"<br /><br />  Diameter: "+theDiameter+"<br /><br />  Requests: "+theRequests;
+	else{ document.getElementById("useroutput").innerHTML="Flavor: "+theDonut+"<br /><br />  Filling: "+theFilling+"<br /><br />  Diameter: "+theDiameter+"<br /><br />  Requests: "+theRequests;
 	}
 	
 }
@@ -64,37 +64,31 @@ function display(){
 </head>
 
 <body>
-<br />
+
 <div id="heading">CHOOSE YOUR DONUT</div>
 
 <div id="main">
 	<section id="userinput">
-    <br>
-	<hr />
-    <br /><br />
-    <form>
+        <form>
     
-    <div>Flavor: <br /><input type="input" id="donutType" size="20"></div>
-    <br />
-    <div>Type of Filling: <br /> <input type="input" id="donutFilling" size = "20">
-    </div>
-    <br />
-    <div>Diameter in Inches:<br /><input type="input" id="diameter" size="20">
-    </div>
-    <br />
-    <div>Special Requests? (optional)<br /> <textarea id="requests" rows="10"></textarea></div>
-    <br />
+        <div>Flavor: <br /><input type="input" id="donutType" size="20"></div>
+        <br />
+        <div>Type of Filling: <br /> <input type="input" id="donutFilling" size = "20">
+        </div>
+        <br />
+        <div>Diameter in Inches:<br /><input type="input" id="diameter" size="20">
+        </div>
+        <br />
+        <div>Special Requests? (optional)<br /> <textarea id="requests" rows="10"></textarea></div>
+        <br />
         
-     <div><input type="button" id="button" value="Save"></div>
+        <div><input type="button" id="button" value="Save"></div>
     
-    </form>
+        </form>
     </section>
     
     
-    <section id="useroutput"> 
- 	<hr />
-    <br /><br />
-    </section>
+    <section id="useroutput"></section>
 
 </div>
 
